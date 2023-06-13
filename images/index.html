@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>STRBClothing</title>
+    <!--- ccs link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- boxicons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- or -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!--font family Mitr-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&family=Mitr:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--header design-->
+    <header>
+      <a href="#" class="logo"><i class="bx bxs-t-shirt"></i>Street Rumble</a>
+
+      <ul class="navbar">
+        <li><a href="#" class="active">Overview</a></li>
+        <li><a href="#">FNtees</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <div class="header-icons">
+        <i class="bx bx-cart"></i>
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+    </header>
+
+    <!--home design-->
+    <section class="home">
+      <div class="home-img">
+        <img src="images/white.png" class="one" />
+      </div>
+
+      <div class="home-text">
+        <h1>
+          Ravenous<br />
+          Gigabyte
+        </h1>
+        <h5>Soft-Washed Graphic T-Shirt Unisex</h5>
+        <h3>₱399</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+    </section>
+
+    <div class="main">
+      <div class="row">
+        <li>
+          <img src="images/white.png" onclick="slider('images/white.png')" />
+        </li>
+      </div>
+
+      <div class="row row2">
+        <li>
+          <img src="images/black.png" onclick="slider('images/black.png')" />
+        </li>
+      </div>
+
+      <div class="row row3">
+        <li>
+          <img src="images/maroon.png" onclick="slider('images/maroon.png')" />
+        </li>
+      </div>
+    </div>
+
+    <a href="#" class="bottom">Scroll Down<i class="bx bx-chevron-down"></i></a>
+
+    <script type="text/javascript">
+      function slider(anything) {
+        document.querySelector(".one").src = anything;
+      }
+
+      let menu = document.querySelector("#menu-icon");
+      let navbar = document.querySelector(".navbar");
+
+      menu.onclick = () => {
+        menu.classList.toggle("bx-x");
+        navbar.classList.toggle("open");
+      };
+    </script>
+  </body>
+</html>
